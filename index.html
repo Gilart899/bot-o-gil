@@ -16,9 +16,7 @@
     </title>
 
 
-    <!-- ==================================================
-         FONTES
-    =================================================== -->
+    <!-- FONTES -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -31,9 +29,7 @@
           rel="stylesheet">
 
 
-    <!-- ==================================================
-         CSS PRINCIPAL
-    =================================================== -->
+    <!-- CSS -->
 
     <link rel="stylesheet"
           href="style.css">
@@ -46,34 +42,24 @@
 
     <!-- ==================================================
          FUNDO MÁGICO
-
-         Os elementos abaixo serão preenchidos
-         automaticamente pelo script.js.
-
-         • Rosas flutuantes
-         • Velas flutuantes
-         • Partículas mágicas
     =================================================== -->
-
 
     <div class="ceu-magico"
          aria-hidden="true">
 
-
-        <!-- ROSAS FLUTUANTES -->
+        <!-- ROSAS CRIADAS PELO JAVASCRIPT -->
 
         <div id="rosasFlutuantes"></div>
 
 
-        <!-- VELAS FLUTUANTES -->
+        <!-- VELAS CRIADAS PELO JAVASCRIPT -->
 
         <div id="velasFlutuantes"></div>
 
 
-        <!-- PARTÍCULAS MÁGICAS -->
+        <!-- PARTÍCULAS CRIADAS PELO JAVASCRIPT -->
 
         <div id="particulasMagicas"></div>
-
 
     </div>
 
@@ -83,7 +69,6 @@
          CONTEÚDO PRINCIPAL
     =================================================== -->
 
-
     <main class="container">
 
 
@@ -91,45 +76,62 @@
              CARTÃO
         =================================================== -->
 
-
         <section class="moldura">
 
 
             <!-- ==================================================
-                 DECORAÇÃO DO CARTÃO
+                 CONTEÚDO DO CARTÃO
             =================================================== -->
-
-
-            <img src="img/rosa.png"
-                 class="rosa-esquerda"
-                 alt=""
-                 aria-hidden="true">
-
-
-            <img src="img/rosas-lateral.png"
-                 class="rosa-direita"
-                 alt=""
-                 aria-hidden="true">
-
-
-
-            <!-- ==================================================
-                 CONTEÚDO
-            =================================================== -->
-
 
             <div class="conteudo">
 
 
                 <!-- ==================================================
-                     TÍTULO
+                     CABEÇALHO
                 =================================================== -->
 
+                <div class="cabecalho">
 
-                <h1>
-                    Presente Especial
-                </h1>
 
+                    <!-- CAIXINHA DE PRESENTE CSS -->
+
+                    <div class="presente-css"
+                         aria-hidden="true">
+
+                        <div class="tampa-presente">
+
+                            <span class="laco-esquerdo"></span>
+
+                            <span class="laco-direito"></span>
+
+                            <span class="laco-centro"></span>
+
+                        </div>
+
+
+                        <div class="corpo-presente">
+
+                            <span class="fita-vertical"></span>
+
+                            <span class="fita-horizontal"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TÍTULO -->
+
+                    <h1>
+                        Presente Especial
+                    </h1>
+
+
+                </div>
+
+
+
+                <!-- SUBTÍTULO -->
 
                 <h2>
                     Via Pix
@@ -138,28 +140,23 @@
 
 
                 <!-- ==================================================
-                     MENSAGEM
+                     TEXTO
                 =================================================== -->
 
-
                 <div class="texto">
-
 
                     <p>
                         Obrigada de coração por desejar me presentear!
                     </p>
-
 
                     <p>
                         Por julgar mais prático, optei por não fazer
                         uma lista de presentes.
                     </p>
 
-
                     <p>
                         Em vez disso, disponibilizo minha chave Pix.
                     </p>
-
 
                 </div>
 
@@ -168,7 +165,6 @@
                 <!-- ==================================================
                      DADOS DO PIX
                 =================================================== -->
-
 
                 <div class="dados">
 
@@ -188,13 +184,7 @@
 
 
 
-                    <!-- ==================================================
-                         CHAVE PIX
-
-                         Número configurado:
-                         79 99940-0547
-                    =================================================== -->
-
+                    <!-- CHAVE PIX -->
 
                     <input
                         type="text"
@@ -205,10 +195,7 @@
 
 
 
-                    <!-- ==================================================
-                         BOTÃO COPIAR
-                    =================================================== -->
-
+                    <!-- BOTÃO -->
 
                     <button
                         id="copiarPix"
@@ -220,10 +207,7 @@
 
 
 
-                    <!-- ==================================================
-                         MENSAGEM DE CONFIRMAÇÃO
-                    =================================================== -->
-
+                    <!-- MENSAGEM -->
 
                     <p
                         id="mensagemPix"
@@ -245,22 +229,12 @@
 
 
 
-    <!-- ==================================================
-         JAVASCRIPT PRINCIPAL
-
-         O script.js será responsável por:
-
-         • Copiar a chave Pix
-         • Criar rosas flutuantes
-         • Criar velas flutuantes
-         • Criar partículas mágicas
-         • Animar o fundo
-    =================================================== -->
-
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
 
 </body>
 
-</html>
+                        </html>
+                        
