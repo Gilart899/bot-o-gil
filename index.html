@@ -2,14 +2,24 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Presente Especial | Via Pix</title>
+    <meta name="theme-color"
+          content="#07162f">
 
-    <!-- Fontes -->
+    <title>
+        Presente Especial | Via Pix
+    </title>
+
+
+    <!-- ==================================================
+         FONTES
+    =================================================== -->
+
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -20,47 +30,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
-    <!-- CSS -->
+
+    <!-- ==================================================
+         CSS PRINCIPAL
+    =================================================== -->
+
     <link rel="stylesheet"
           href="style.css">
+
 </head>
+
 
 <body>
 
+
     <!-- ==================================================
          FUNDO MÁGICO
-         Os elementos serão criados automaticamente
-         pelo JavaScript.
+
+         Os elementos abaixo serão preenchidos
+         automaticamente pelo script.js.
+
+         • Rosas flutuantes
+         • Velas flutuantes
+         • Partículas mágicas
     =================================================== -->
 
-    <div class="ceu-magico" aria-hidden="true">
 
-        <!-- Rosas -->
+    <div class="ceu-magico"
+         aria-hidden="true">
+
+
+        <!-- ROSAS FLUTUANTES -->
+
         <div id="rosasFlutuantes"></div>
 
-        <!-- Velas -->
+
+        <!-- VELAS FLUTUANTES -->
+
         <div id="velasFlutuantes"></div>
 
-        <!-- Partículas brilhantes -->
+
+        <!-- PARTÍCULAS MÁGICAS -->
+
         <div id="particulasMagicas"></div>
 
+
     </div>
+
 
 
     <!-- ==================================================
          CONTEÚDO PRINCIPAL
     =================================================== -->
 
+
     <main class="container">
+
+
+        <!-- ==================================================
+             CARTÃO
+        =================================================== -->
+
 
         <section class="moldura">
 
-            <!-- Decorações fixas do cartão -->
+
+            <!-- ==================================================
+                 DECORAÇÃO DO CARTÃO
+            =================================================== -->
+
 
             <img src="img/rosa.png"
                  class="rosa-esquerda"
                  alt=""
                  aria-hidden="true">
+
 
             <img src="img/rosas-lateral.png"
                  class="rosa-direita"
@@ -68,61 +112,103 @@
                  aria-hidden="true">
 
 
-            <!-- Conteúdo -->
+
+            <!-- ==================================================
+                 CONTEÚDO
+            =================================================== -->
+
 
             <div class="conteudo">
+
+
+                <!-- ==================================================
+                     TÍTULO
+                =================================================== -->
+
 
                 <h1>
                     Presente Especial
                 </h1>
+
 
                 <h2>
                     Via Pix
                 </h2>
 
 
+
+                <!-- ==================================================
+                     MENSAGEM
+                =================================================== -->
+
+
                 <div class="texto">
+
 
                     <p>
                         Obrigada de coração por desejar me presentear!
                     </p>
+
 
                     <p>
                         Por julgar mais prático, optei por não fazer
                         uma lista de presentes.
                     </p>
 
+
                     <p>
                         Em vez disso, disponibilizo minha chave Pix.
                     </p>
 
+
                 </div>
 
 
-                <!-- Dados -->
+
+                <!-- ==================================================
+                     DADOS DO PIX
+                =================================================== -->
+
 
                 <div class="dados">
+
+
+                    <!-- NOME -->
 
                     <h3>
                         Mirella Santos Teles
                     </h3>
+
+
+                    <!-- BANCO -->
 
                     <p class="banco">
                         Banco Inter
                     </p>
 
 
-                    <!-- Chave Pix -->
+
+                    <!-- ==================================================
+                         CHAVE PIX
+
+                         Número configurado:
+                         79 99940-0547
+                    =================================================== -->
+
 
                     <input
                         type="text"
                         id="chavePix"
-                        value="SUA_CHAVE_PIX_AQUI"
+                        value="79 99940-0547"
                         readonly
-                        aria-label="Chave Pix">
+                        aria-label="Chave Pix por telefone">
 
 
-                    <!-- Botão -->
+
+                    <!-- ==================================================
+                         BOTÃO COPIAR
+                    =================================================== -->
+
 
                     <button
                         id="copiarPix"
@@ -133,7 +219,11 @@
                     </button>
 
 
-                    <!-- Mensagem -->
+
+                    <!-- ==================================================
+                         MENSAGEM DE CONFIRMAÇÃO
+                    =================================================== -->
+
 
                     <p
                         id="mensagemPix"
@@ -141,21 +231,36 @@
                         aria-live="polite">
                     </p>
 
+
                 </div>
+
 
             </div>
 
+
         </section>
+
 
     </main>
 
 
+
     <!-- ==================================================
-         JAVASCRIPT
+         JAVASCRIPT PRINCIPAL
+
+         O script.js será responsável por:
+
+         • Copiar a chave Pix
+         • Criar rosas flutuantes
+         • Criar velas flutuantes
+         • Criar partículas mágicas
+         • Animar o fundo
     =================================================== -->
+
 
     <script src="script.js"></script>
 
+
 </body>
 
-    </html>
+</html>
