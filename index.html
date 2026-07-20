@@ -1,86 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Presente Via Pix | Mirella Santos Teles</title>
+    <title>Presente Especial | Via Pix</title>
 
-<link rel="stylesheet" href="style.css">
+    <!-- Fontes -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
 </head>
 
 <body>
 
-<div class="ceu"></div>
-<div class="estrelas"></div>
-<div class="nevoa"></div>
-<div class="particulas"></div>
+    <!-- ==================================================
+         FUNDO MÁGICO
+         Os elementos serão criados automaticamente
+         pelo JavaScript.
+    =================================================== -->
 
-<div class="container">
-
-    <div class="moldura">
+    <div class="ceu-magico" aria-hidden="true">
 
         <!-- Rosas -->
-        <img src="img/rosa.png" class="rosa-esquerda" alt="Rosa">
+        <div id="rosasFlutuantes"></div>
 
-        <img src="img/rosas-lateral.png" class="rosa-direita" alt="Rosas">
+        <!-- Velas -->
+        <div id="velasFlutuantes"></div>
 
-        <div class="conteudo">
-
-            <h1>🎁 Presente Especial</h1>
-
-            <h2>Via Pix</h2>
-
-            <p class="texto">
-
-                <strong>Obrigada de coração por desejar me presentear!</strong>
-
-                <br><br>
-
-                Por julgar mais prático, optei por não fazer uma lista de presentes.
-
-                <br><br>
-
-                Caso deseje, você pode utilizar minha chave Pix abaixo.
-
-            </p>
-
-            <div class="dados">
-
-                <h3>Mirella Santos Teles</h3>
-
-                <p class="banco">Banco Inter</p>
-
-                <input
-                    id="chavePix"
-                    type="text"
-                    readonly
-                    value="79 99940-0547">
-
-                <button id="copiarPix">
-
-                    📋 Copiar Chave Pix
-
-                </button>
-
-                <div id="mensagemPix" class="mensagem"></div>
-
-            </div>
-
-        </div>
+        <!-- Partículas brilhantes -->
+        <div id="particulasMagicas"></div>
 
     </div>
 
-</div>
 
-<script src="script.js"></script>
+    <!-- ==================================================
+         CONTEÚDO PRINCIPAL
+    =================================================== -->
+
+    <main class="container">
+
+        <section class="moldura">
+
+            <!-- Decorações fixas do cartão -->
+
+            <img src="img/rosa.png"
+                 class="rosa-esquerda"
+                 alt=""
+                 aria-hidden="true">
+
+            <img src="img/rosas-lateral.png"
+                 class="rosa-direita"
+                 alt=""
+                 aria-hidden="true">
+
+
+            <!-- Conteúdo -->
+
+            <div class="conteudo">
+
+                <h1>
+                    Presente Especial
+                </h1>
+
+                <h2>
+                    Via Pix
+                </h2>
+
+
+                <div class="texto">
+
+                    <p>
+                        Obrigada de coração por desejar me presentear!
+                    </p>
+
+                    <p>
+                        Por julgar mais prático, optei por não fazer
+                        uma lista de presentes.
+                    </p>
+
+                    <p>
+                        Em vez disso, disponibilizo minha chave Pix.
+                    </p>
+
+                </div>
+
+
+                <!-- Dados -->
+
+                <div class="dados">
+
+                    <h3>
+                        Mirella Santos Teles
+                    </h3>
+
+                    <p class="banco">
+                        Banco Inter
+                    </p>
+
+
+                    <!-- Chave Pix -->
+
+                    <input
+                        type="text"
+                        id="chavePix"
+                        value="SUA_CHAVE_PIX_AQUI"
+                        readonly
+                        aria-label="Chave Pix">
+
+
+                    <!-- Botão -->
+
+                    <button
+                        id="copiarPix"
+                        type="button">
+
+                        Copiar Chave Pix
+
+                    </button>
+
+
+                    <!-- Mensagem -->
+
+                    <p
+                        id="mensagemPix"
+                        class="mensagem"
+                        aria-live="polite">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script src="script.js"></script>
 
 </body>
-</html>
+
+    </html>
