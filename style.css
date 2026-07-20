@@ -3,9 +3,13 @@
 ================================================== */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 
@@ -15,21 +19,30 @@
 
 body {
 
-    font-family: 'Poppins', sans-serif;
+    font-family:
+        'Poppins',
+        sans-serif;
 
-    min-height: 100vh;
+    min-height:
+        100vh;
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    align-items: center;
+    align-items:
+        center;
 
-    overflow-x: hidden;
+    overflow-x:
+        hidden;
 
-    position: relative;
+    position:
+        relative;
 
     background:
+
         radial-gradient(
             circle at 20% 20%,
             rgba(255, 215, 100, 0.10),
@@ -64,34 +77,44 @@ body {
 
 .ceu-magico {
 
-    position: fixed;
+    position:
+        fixed;
 
-    inset: 0;
+    inset:
+        0;
 
-    width: 100%;
+    width:
+        100%;
 
-    height: 100%;
+    height:
+        100%;
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 
-    z-index: 0;
+    z-index:
+        0;
 
 }
 
 
 /* ==================================================
-   EFEITO DE LUZ NO FUNDO
+   LUZ MÁGICA
 ================================================== */
 
 .ceu-magico::before {
 
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: -20%;
+    inset:
+        -20%;
 
     background:
 
@@ -125,11 +148,14 @@ body {
 
 .ceu-magico::after {
 
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 0;
+    inset:
+        0;
 
     background-image:
 
@@ -146,14 +172,19 @@ body {
         );
 
     background-size:
+
         70px 70px,
+
         130px 130px;
 
     background-position:
+
         0 0,
+
         40px 30px;
 
-    opacity: 0.25;
+    opacity:
+        0.25;
 
     animation:
         estrelasMovimento 25s linear infinite;
@@ -162,47 +193,48 @@ body {
 
 
 /* ==================================================
-   CONTAINERS DOS ELEMENTOS
+   CONTAINERS DAS ANIMAÇÕES
 ================================================== */
 
 #rosasFlutuantes,
 #velasFlutuantes,
 #particulasMagicas {
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 0;
+    inset:
+        0;
 
-    width: 100%;
+    width:
+        100%;
 
-    height: 100%;
+    height:
+        100%;
 
 }
 
 
 /* ==================================================
-   ROSAS FLUTUANTES
+   ROSAS EM CSS
 ================================================== */
 
 .rosa-flutuante {
 
-    position: absolute;
+    position:
+        absolute;
 
-    bottom: -150px;
+    bottom:
+        -80px;
 
-    width: var(--tamanho);
+    width:
+        var(--tamanho);
 
-    height: auto;
+    height:
+        var(--tamanho);
 
-    opacity: var(--opacidade);
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 0 8px
-            rgba(255, 80, 100, 0.25)
-        );
+    opacity:
+        var(--opacidade);
 
     animation:
 
@@ -217,6 +249,29 @@ body {
 }
 
 
+/* Formato visual da rosa */
+
+.rosa-flutuante::before {
+
+    content:
+        "🌹";
+
+    display:
+        block;
+
+    font-size:
+        var(--tamanho);
+
+    filter:
+
+        drop-shadow(
+            0 0 8px
+            rgba(255, 60, 80, 0.45)
+        );
+
+}
+
+
 /* ==================================================
    ANIMAÇÃO DAS ROSAS
 ================================================== */
@@ -226,17 +281,19 @@ body {
     0% {
 
         transform:
+
             translate3d(
                 0,
                 0,
                 0
             )
+
             rotate(0deg);
 
-        opacity: 0;
+        opacity:
+            0;
 
     }
-
 
     10% {
 
@@ -245,57 +302,62 @@ body {
 
     }
 
-
     30% {
 
         transform:
+
             translate3d(
                 var(--movimento1),
                 -30vh,
                 0
             )
+
             rotate(30deg);
 
     }
 
-
     55% {
 
         transform:
+
             translate3d(
                 var(--movimento2),
                 -60vh,
                 0
             )
+
             rotate(-25deg);
 
     }
 
-
     75% {
 
         transform:
+
             translate3d(
                 var(--movimento3),
                 -80vh,
                 0
             )
+
             rotate(35deg);
 
     }
 
-
     100% {
 
         transform:
+
             translate3d(
                 var(--movimento4),
                 -120vh,
                 0
             )
+
             rotate(70deg);
 
-        opacity: 0;
+        opacity:
+            0;
 
     }
 
@@ -303,28 +365,25 @@ body {
 
 
 /* ==================================================
-   VELAS FLUTUANTES
+   VELAS EM CSS
 ================================================== */
 
 .vela-flutuante {
 
-    position: absolute;
+    position:
+        absolute;
 
-    bottom: -180px;
+    bottom:
+        -80px;
 
-    width: var(--tamanho);
+    width:
+        var(--tamanho);
 
-    height: auto;
+    height:
+        var(--tamanho);
 
-    opacity: var(--opacidade);
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 0 10px
-            rgba(255, 200, 80, 0.35)
-        );
+    opacity:
+        var(--opacidade);
 
     animation:
 
@@ -339,6 +398,29 @@ body {
 }
 
 
+/* Visual da vela */
+
+.vela-flutuante::before {
+
+    content:
+        "🕯️";
+
+    display:
+        block;
+
+    font-size:
+        var(--tamanho);
+
+    filter:
+
+        drop-shadow(
+            0 0 10px
+            rgba(255, 200, 80, 0.55)
+        );
+
+}
+
+
 /* ==================================================
    ANIMAÇÃO DAS VELAS
 ================================================== */
@@ -348,17 +430,19 @@ body {
     0% {
 
         transform:
+
             translate3d(
                 0,
                 0,
                 0
             )
+
             rotate(-5deg);
 
-        opacity: 0;
+        opacity:
+            0;
 
     }
-
 
     10% {
 
@@ -367,57 +451,62 @@ body {
 
     }
 
-
     25% {
 
         transform:
+
             translate3d(
                 var(--movimento1),
                 -25vh,
                 0
             )
+
             rotate(5deg);
 
     }
 
-
     50% {
 
         transform:
+
             translate3d(
                 var(--movimento2),
                 -55vh,
                 0
             )
+
             rotate(-5deg);
 
     }
 
-
     75% {
 
         transform:
+
             translate3d(
                 var(--movimento3),
                 -85vh,
                 0
             )
+
             rotate(6deg);
 
     }
 
-
     100% {
 
         transform:
+
             translate3d(
                 var(--movimento4),
                 -120vh,
                 0
             )
+
             rotate(-4deg);
 
-        opacity: 0;
+        opacity:
+            0;
 
     }
 
@@ -425,22 +514,28 @@ body {
 
 
 /* ==================================================
-   PARTÍCULAS MÁGICAS
+   PARTÍCULAS
 ================================================== */
 
 .particula {
 
-    position: absolute;
+    position:
+        absolute;
 
-    width: var(--tamanho);
+    width:
+        var(--tamanho);
 
-    height: var(--tamanho);
+    height:
+        var(--tamanho);
 
-    left: var(--posicao);
+    left:
+        var(--posicao);
 
-    bottom: -20px;
+    bottom:
+        -20px;
 
-    border-radius: 50%;
+    border-radius:
+        50%;
 
     background:
         rgba(
@@ -472,7 +567,7 @@ body {
 
 
 /* ==================================================
-   ANIMAÇÃO DAS PARTÍCULAS
+   ANIMAÇÃO PARTÍCULAS
 ================================================== */
 
 @keyframes subirParticula {
@@ -480,50 +575,55 @@ body {
     0% {
 
         transform:
+
             translateY(0)
             scale(0.5);
 
-        opacity: 0;
+        opacity:
+            0;
 
     }
-
 
     20% {
 
-        opacity: 0.8;
+        opacity:
+            0.8;
 
     }
-
 
     50% {
 
         transform:
+
             translate(
                 var(--movimento),
                 -50vh
             )
+
             scale(1);
 
     }
 
-
     80% {
 
-        opacity: 0.5;
+        opacity:
+            0.5;
 
     }
-
 
     100% {
 
         transform:
+
             translate(
                 var(--movimento2),
                 -110vh
             )
+
             scale(0.2);
 
-        opacity: 0;
+        opacity:
+            0;
 
     }
 
@@ -536,19 +636,26 @@ body {
 
 .container {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 10;
+    z-index:
+        10;
 
-    width: 100%;
+    width:
+        100%;
 
-    display: flex;
+    display:
+        flex;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    align-items: center;
+    align-items:
+        center;
 
-    padding: 20px;
+    padding:
+        20px;
 
 }
 
@@ -559,15 +666,20 @@ body {
 
 .moldura {
 
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
+    width:
+        100%;
 
-    max-width: 620px;
+    max-width:
+        620px;
 
-    padding: 40px;
+    padding:
+        40px;
 
-    border-radius: 30px;
+    border-radius:
+        30px;
 
     background:
         rgba(
@@ -610,7 +722,8 @@ body {
             0.03
         );
 
-    overflow: hidden;
+    overflow:
+        hidden;
 
 }
 
@@ -621,9 +734,35 @@ body {
 
 .conteudo {
 
-    position: relative;
+    position:
+        relative;
 
-    z-index: 5;
+    z-index:
+        5;
+
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.cabecalho {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    margin-bottom:
+        8px;
 
 }
 
@@ -633,8 +772,6 @@ body {
 ================================================== */
 
 h1 {
-
-    text-align: center;
 
     color:
         #FFD86C;
@@ -648,6 +785,12 @@ h1 {
 
     font-weight:
         700;
+
+    line-height:
+        1.2;
+
+    text-align:
+        center;
 
     text-shadow:
 
@@ -663,12 +806,364 @@ h1 {
 
 
 /* ==================================================
+   CAIXINHA DE PRESENTE
+   CRIADA 100% COM CSS
+================================================== */
+
+.presente-css {
+
+    position:
+        relative;
+
+    width:
+        58px;
+
+    height:
+        52px;
+
+    flex-shrink:
+        0;
+
+    filter:
+
+        drop-shadow(
+            0 0 7px
+            rgba(
+                255,
+                210,
+                70,
+                0.55
+            )
+        );
+
+    animation:
+        presenteFlutuando
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ==================================================
+   CORPO DA CAIXA
+================================================== */
+
+.corpo-presente {
+
+    position:
+        absolute;
+
+    left:
+        5px;
+
+    bottom:
+        0;
+
+    width:
+        48px;
+
+    height:
+        34px;
+
+    border-radius:
+        3px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #FFE58A,
+            #D99B16 45%,
+            #FFD85A 70%,
+            #B87908
+        );
+
+    border:
+        2px solid
+        #FFE28A;
+
+    box-shadow:
+
+        inset
+        -5px
+        -5px
+        10px
+        rgba(
+            100,
+            50,
+            0,
+            0.25
+        );
+
+}
+
+
+/* ==================================================
+   TAMPA
+================================================== */
+
+.tampa-presente {
+
+    position:
+        absolute;
+
+    left:
+        2px;
+
+    top:
+        11px;
+
+    width:
+        54px;
+
+    height:
+        13px;
+
+    border-radius:
+        3px;
+
+    z-index:
+        3;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #FFEBA4,
+            #E4A51E,
+            #FFD65A
+        );
+
+    border:
+        2px solid
+        #FFE69A;
+
+}
+
+
+/* ==================================================
+   FITA VERTICAL
+================================================== */
+
+.fita-vertical {
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        19px;
+
+    width:
+        10px;
+
+    height:
+        100%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #FFF1A9,
+            #E4A51C,
+            #FFF0A0
+        );
+
+}
+
+
+/* ==================================================
+   FITA HORIZONTAL
+================================================== */
+
+.fita-horizontal {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        10px;
+
+    width:
+        100%;
+
+    height:
+        9px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #FFE99A,
+            #D99916,
+            #FFE99A
+        );
+
+}
+
+
+/* ==================================================
+   LAÇO ESQUERDO
+================================================== */
+
+.laco-esquerdo {
+
+    position:
+        absolute;
+
+    left:
+        8px;
+
+    top:
+        -4px;
+
+    width:
+        21px;
+
+    height:
+        15px;
+
+    border-radius:
+        80% 20% 80% 20%;
+
+    transform:
+        rotate(25deg);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #FFF0A0,
+            #D99A14
+        );
+
+    border:
+        1px solid
+        #FFE69A;
+
+}
+
+
+/* ==================================================
+   LAÇO DIREITO
+================================================== */
+
+.laco-direito {
+
+    position:
+        absolute;
+
+    right:
+        8px;
+
+    top:
+        -4px;
+
+    width:
+        21px;
+
+    height:
+        15px;
+
+    border-radius:
+        20% 80% 20% 80%;
+
+    transform:
+        rotate(-25deg);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #FFF0A0,
+            #D99A14
+        );
+
+    border:
+        1px solid
+        #FFE69A;
+
+}
+
+
+/* ==================================================
+   CENTRO DO LAÇO
+================================================== */
+
+.laco-centro {
+
+    position:
+        absolute;
+
+    top:
+        2px;
+
+    left:
+        24px;
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    z-index:
+        5;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 30%,
+            #FFF6B5,
+            #D99813
+        );
+
+}
+
+
+/* ==================================================
+   ANIMAÇÃO DA CAIXINHA
+================================================== */
+
+@keyframes presenteFlutuando {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-2deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px)
+            rotate(2deg);
+
+    }
+
+}
+
+
+/* ==================================================
    SUBTÍTULO
 ================================================== */
 
 h2 {
 
-    text-align: center;
+    text-align:
+        center;
 
     color:
         #ffffff;
@@ -743,7 +1238,7 @@ h2 {
 
 
 /* ==================================================
-   INPUT
+   INPUT PIX
 ================================================== */
 
 input {
@@ -815,6 +1310,7 @@ button {
         );
 
     transition:
+
         transform
         0.2s
         ease,
@@ -853,7 +1349,7 @@ button:active {
 
 
 /* ==================================================
-   MENSAGEM
+   MENSAGEM DE CÓPIA
 ================================================== */
 
 .mensagem {
@@ -872,126 +1368,6 @@ button:active {
 
     min-height:
         24px;
-
-}
-
-
-/* ==================================================
-   ROSAS DECORATIVAS DO CARTÃO
-================================================== */
-
-.rosa-esquerda {
-
-    position:
-        absolute;
-
-    width:
-        120px;
-
-    left:
-        -20px;
-
-    bottom:
-        -10px;
-
-    z-index:
-        1;
-
-}
-
-
-.rosa-direita {
-
-    position:
-        absolute;
-
-    width:
-        150px;
-
-    right:
-        -20px;
-
-    top:
-        -10px;
-
-    z-index:
-        1;
-
-}
-
-
-/* ==================================================
-   ANIMAÇÕES DO FUNDO
-================================================== */
-
-@keyframes luzMagica {
-
-    0% {
-
-        transform:
-            scale(1)
-            rotate(0deg);
-
-        opacity:
-            0.5;
-
-    }
-
-    100% {
-
-        transform:
-            scale(1.08)
-            rotate(2deg);
-
-        opacity:
-            1;
-
-    }
-
-}
-
-
-@keyframes estrelasMovimento {
-
-    0% {
-
-        transform:
-            translateY(0);
-
-    }
-
-    100% {
-
-        transform:
-            translateY(-70px);
-
-    }
-
-}
-
-
-/* ==================================================
-   ACESSIBILIDADE
-================================================== */
-
-@media (
-    prefers-reduced-motion: reduce
-) {
-
-    *,
-    *::before,
-    *::after {
-
-        animation-duration:
-            0.01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
-        scroll-behavior:
-            auto !important;
-
-    }
 
 }
 
@@ -1020,10 +1396,18 @@ button:active {
     }
 
 
+    .cabecalho {
+
+        gap:
+            10px;
+
+    }
+
+
     h1 {
 
         font-size:
-            30px;
+            27px;
 
     }
 
@@ -1044,35 +1428,43 @@ button:active {
     }
 
 
-    .rosa-esquerda {
+    .presente-css {
 
-        width:
-            80px;
-
-    }
-
-
-    .rosa-direita {
-
-        width:
-            100px;
+        transform:
+            scale(0.85);
 
     }
 
 
-    .rosa-flutuante {
+    .cabecalho .presente-css {
 
-        max-width:
-            80px;
-
-    }
-
-
-    .vela-flutuante {
-
-        max-width:
-            80px;
+        margin-right:
+            -3px;
 
     }
 
+}
+
+
+/* ==================================================
+   ACESSIBILIDADE
+================================================== */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    * {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
     }
+
+   }
