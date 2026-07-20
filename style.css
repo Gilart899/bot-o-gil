@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    background:radial-gradient(circle at top,#14386d,#07162f 65%,#020814);
+    position:relative;
+}
+
+.ceu,
+.estrelas,
+.nevoa,
+.particulas{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.estrelas{
+    background-image:
+    radial-gradient(#fff 1px,transparent 1px),
+    radial-gradient(#FFD86C 2px,transparent 2px);
+    background-size:60px 60px,140px 140px;
+    opacity:.35;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.moldura{
+    position:relative;
+    width:100%;
+    max-width:620px;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:2px solid rgba(255,215,120,.7);
+    box-shadow:0 0 30px rgba(255,215,0,.2);
+    overflow:hidden;
+}
+
+.conteudo{
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    text-align:center;
+    color:#FFD86C;
+    font-family:'Cinzel',serif;
+    font-size:40px;
+}
+
+h2{
+    text-align:center;
+    color:#fff;
+    margin-bottom:25px;
+    font-family:'Cinzel',serif;
+}
+
+.texto{
+    color:#fff;
+    text-align:center;
+    line-height:1.8;
+}
+
+.dados{
+    margin-top:30px;
+}
+
+.dados h3{
+    color:#FFD86C;
+    text-align:center;
+    font-family:'Cinzel',serif;
+}
+
+.banco{
+    color:#fff;
+    text-align:center;
+    margin:10px 0 20px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    text-align:center;
+}
+
+button{
+    width:100%;
+    margin-top:15px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    background:linear-gradient(90deg,#FFEBA7,#FFD14B,#FFEBA7);
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+.mensagem{
+    margin-top:15px;
+    text-align:center;
+    color:#7CFF7C;
+    font-weight:bold;
+}
+
+.rosa-esquerda{
+    position:absolute;
+    width:120px;
+    left:-20px;
+    bottom:-10px;
+}
+
+.rosa-direita{
+    position:absolute;
+    width:150px;
+    right:-20px;
+    top:-10px;
+}
+
+@media(max-width:600px){
+
+.moldura{
+    padding:25px;
+}
+
+h1{
+    font-size:30px;
+}
+
+h2{
+    font-size:22px;
+}
+
+.texto{
+    font-size:15px;
+}
+
+.rosa-esquerda{
+    width:80px;
+}
+
+.rosa-direita{
+    width:100px;
+}
+
+}
